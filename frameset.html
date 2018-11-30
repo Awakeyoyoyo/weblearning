@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page1</title>
+</head>
+<frameset rows="15%,85%">
+    <frame src="page1.html"></fram>
+    <frameset cols="25%,80%">
+        <frame src="frame2.html"></fram>
+        <frame src="frame3.html" name="showframe"></fram>
+    </frameset>
+    <fram src=""></fram>
+         <!-- target="showframe" 跳转到页面时寻找name为showframe的容器来接收内容
+         为——blank时则新建一个页面
+        -->
+</frameset>
+</html>

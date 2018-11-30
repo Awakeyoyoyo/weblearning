@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css生效的原理</title>
+    <link rel="stylesheet" href="css/1.css">
+</head>
+<body>
+    <!-- css
+        div{ 
+        color:red;
+        width:100px;
+        height:100px; 
+        }
+        选择器：例子中的div
+        作用：通过选择器找到->html元素 再将 样式->传递给元素
+        4个大类
+        基本选择器
+        组合
+        属性
+        伪元素
+        基本选择器：
+        
+        *通配符：  *{border ：1px solid balck} 给所有元素加黑色外边框
+        
+        标签div： 制定标签名字 div{border ：1px solid balck} 给div标签全部加上黑色外边框
+        
+        id选择器：具有唯一性
+             #cacaca{border ：1px solid balck}
+            <p id=cacaca></p> 给id：cacaca的元素加黑色外边框
+            元素之间id不能相同
+            div#cacaca{} //则不对<p>起作用
+        
+                class选择器： 不具有唯一性
+         .txt{border ：1px solid balck}
+         <p class="txt"></p> 给p的元素加上txt里的属性
+         div.txt{} //则不对<p>起作用
+
+        尽量用class 写css
+    -->
+    <div >苹果1</div>
+    <div >苹果2</div>
+    <div >苹果3</div>
+    <div >苹果4</div> 
+    <!-- 
+        css原理：
+        1.优先原则：后解析的内容回覆盖之前解析的内容
+        2.继承原则：嵌套里面的标签，拥有外部标签的某些样式 
+         子元素继承父元素的属性
+          -->
+
+
+
+     <!-- 优先原则：->选择器
+    1.同一个选择器：从上往下执行 
+    css:div{
+        color:red;
+        color:green}
+    最终显示绿色
+    -->
+    <!-- 2.同一类型的选择器 
+     .div1{color:red}
+     .div2{color:green}
+        <div calss="div2 div1"> 
+     最终结果绿色 
+    -->
+    <!-- 不同类型的选择器
+    *<div<class<id
+    优先解析低优先级的 即*
+    *{color:red}
+     .div2{color:green}
+      <div calss="div2"> 
+          结果绿色
+   2.外部样式和内部样式
+   何必之后一起解析 先外部样式
+   加了important最后执行
+   !important
+        -->
+<!-- 继承原则
+
+   1. 跟文字 文本 样式可以被继承
+.txt{color:red}
+<div class="txt">aaaa
+    <div>bbb</div>
+</div>
+aaa bbb全部红色
+    2.块级元素 宽度 不被设置->父级元素的宽
+    高度->内容决定
+
+-->
+
+
+
+<!--组合选择器-->
+<!-- 把基本选择器 通过特殊符号串在一起->意义
+潜逃选择器
+    div p->p(div)
+    div p{
+        color:red
+    }
+则div下的p都会变红
+
+子选择器
+div>p  p(父标签 div)
+div>p{color:red} 只有div下一层的p生效，再下一层不生效
+
+相邻的选择器 同级别选择器
+div+p -> p(div)
+div+p{color:red} <div></div><p>aaa</p> 
+aaa会变红
+-->
+
+</body>
+</html>
