@@ -1,0 +1,44 @@
+div{
+    width: 200px;
+    height: 300px;
+    background:red;
+    border: 1px solid black;
+}
+/* 定位
+    position:
+    
+    类型
+    固定定位
+    fixed固定再一个地方
+    位置
+    top:
+    bottom:
+    left:
+    right:
+    
+    相对定位
+    position:relative;
+    灵魂出窍=。= 但肉体还占着位置虽然看不见
+
+    绝对定位:帮气球=。=
+    什么都没了
+    不占位置了。。
+    且坐标时针对他的父级元素是否有position
+    若没有一直向上找取body
+    */
+    .container{
+        margin: auto;
+        background:yellow;
+        position: relative;
+    }
+.div1{
+    /* 相对定位 */
+    /* position: relative; */
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+
+}
+

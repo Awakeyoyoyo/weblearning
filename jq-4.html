@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq对象+静态方法</title>
+    <script src="js/jquery-1.5.2.min.js"></script>
+    <script>
+        // $(function(){
+        //     /*
+            
+        //     1.什么事jquery的对象
+        //      jquery对象是一个伪数组
+        //     2.什么事伪数组
+        //     有0~lengty-1的属性，并且有length属性
+            
+            
+        //     */
+        //     var $div=$("div");
+        //     console.log($div);
+        //     var arr=[1,3,.5];
+        //     console.log(arr);
+        // });
+        // 静态方法和实例方法
+            // 定义一个类
+            function AClass(){
+        }
+        // 2.给这个类添加一个静态方法
+        //直接添加类的就是静态方法
+        AClass.staticMethod=function(){
+            alert("staticMethod");
+        }
+        //静态方法可以通过类名调用
+        AClass.staticMethod(); 
+    //3.给这个类添加一个实例方法
+        AClass.prototype.instanceMethod=function(){
+            alert("instanceMethod");
+        }
+        //实例方法通过类的实例调用
+        //创建一个实例
+        var a=new AClass();
+        a.instanceMethod();
+    </script>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+</body>
+</html>

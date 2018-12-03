@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq-1</title>
+    <script src="js/jquery-1.5.2.min.js"></script>
+    <!-- <script>
+        window.onload= function (ev) {
+            var img=document.getElementsByTagName("img")[0];
+            console.log(img);
+            var width=window.getComputedStyle(img).width;
+            console.log("onload",width)
+        }
+        $(document).ready(function(){
+            var $img=$("img");
+            console.log($img);
+            var $width=$img.width();
+            console.log("ready",$width);
+        })
+        /*
+        1.原生js和jq入口函数得加载模式不一样
+        js会等到dom元素、图片加载完才执行
+        jq只等dom元素，图片还没加载就执行了
+        */
+    </script> -->
+    
+    <!-- <script>
+        window.onload=function(ev){
+            alert("hello1");
+        }
+        window.onload=function(ev){
+            alert("hello2");
+        }
+        $(document).ready(function(){
+            alert("hello1")
+        });
+        $(document).ready(function(){
+            alert("hello2")
+        });
+        /*
+        js如果编写多个入口函数，后面的编写回覆盖前面
+        jq则不会覆盖
+        */
+    
+    </script> -->
+</head>
+<body>
+    <img src="https://www.baidu.com/img/bd_logo1.png?where=super" alt="">
+</body>
+</html>

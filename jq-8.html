@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq的attr方法+prop方法</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script> 
+    $(function(){
+            /*
+            1.attr(name|pro|key,val|fn)
+            作用：获取或者设置属性节点的值
+            可以传递一个、两个参数
+            一个，代表获取属性节点的值
+            两个，代表设置属性节点的值
+            注意点：
+            1.获取
+            无论找到多少个元素，都只会返回第一个元素指定属性节点的值
+            2.设置
+            (1) 找到多少个元素就会设置多少个元素的属性节点
+            (2)如果设置的属性节点不存在，系统会自动新增
+
+
+
+            2.removeAttr(name)
+            作用删除属性节点 
+            找到多少个元素就会删除多少个元素的属性节点
+            removeAttr("name" "class")
+            属性节点名称中间有空格隔开则 name class的属性节点都删除
+            */
+
+        //    $("span").attr("class","box");
+        //     var x= $("span").attr("class");
+        //     console.log(x)
+
+            /*
+            3.prop方法
+                特点和attr方一样
+            4.removeprop方法
+            */
+             $("span").eq(0).prop("demo","lqhao")
+             $("span").eq(1).prop("demo","zpwen")
+            console.log($("span").eq(0).prop("className"))
+    })
+
+    </script>
+</head>
+<body>
+        <span class="span1" name="laomei"></span>
+        <span class="span2" name="lqhao"></span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+a{
+    color: gold;
+}
+/* 用伪类咯 */
+/* 初始状态 link
+被访问状态 visited
+鼠标移动 hover
+点击 active */
+a:link{
+    color: blue;
+}
+a:visted{
+color:gold;
+}
+a:hover{
+color:red;
+font-size: 30px;
+}
+a:active{
+color:greenyellow;
+}
+
+ul{
+    /* 修改小点点 */
+    list-style-type: none;
+}
+li{
+    background-image: url('../img/bck.png');
+    background-repeat: no-repeat;
+    height: 50px;
+    padding: 25px 50px 0;
+}

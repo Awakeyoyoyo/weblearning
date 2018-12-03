@@ -1,0 +1,45 @@
+/*
+盒子：
+所有元素->矩形的盒子
+内边距：padding
+盒子框：border
+外边框：margin
+*/
+.box1{
+    /* 盒子框 */
+/* border:5px solid black; */
+    /* 内边距 */
+/* padding: 10px; */
+/* 上下20 左右50 */
+/* padding: 20px 50px; */
+/* 上20 左右50 下60 */
+/* padding: 20px 50px 60px; */
+/* 顺时针上下左右 */
+padding:20px 50px 30px 40px;
+/* 背景颜色包含内边距不包含边框 */
+background: greenyellow;
+/* 外边距 */
+margin:30px;
+}
+div{
+    /* float: left; */
+    /* display: inline-block; */
+    width: 800px;
+    /* border: 1px solid black; */
+}
+/*
+margin重叠
+1.平级元素 取最大值
+    解决方法
+    -float
+    -inline-block
+2.嵌套关系(主要原因时没有封住盒子 即上下没东西)
+    -border
+    -padding
+    -overflow:hidden
+*/
+.box2{
+/* border: 5px solid black; */
+background: green;
+margin: 60px;
+}
